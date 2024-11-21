@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://vhomello.github.io/al-folio/sitemap.xml
+Sitemap: https://vhomello.github.io/sitemap.xml
