@@ -3,7 +3,7 @@ layout: default
 permalink: /blog/
 title: blog
 nav: true
-nav_order: 1
+nav_order: 0
 pagination:
   enabled: true
   collection: posts
@@ -35,7 +35,7 @@ pagination:
     <ul class="p-0 m-0">
       {% for tag in site.display_tags %}
         <li>
-          <i class="fa-solid fa-hashtag fa-sm"></i> <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag }}</a>
+          <i class="fa-solid fa-hashtag"></i> <a href="{{ tag | slugify | prepend: '/blog/tag/' | relative_url }}">{{ tag }}</a>
         </li>
         {% unless forloop.last %}
           <p>&bull;</p>
@@ -46,7 +46,7 @@ pagination:
       {% endif %}
       {% for category in site.display_categories %}
         <li>
-          <i class="fa-solid fa-tag fa-sm"></i> <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
+          <i class="fa-solid fa-tag"></i> <a href="{{ category | slugify | prepend: '/blog/category/' | relative_url }}">{{ category }}</a>
         </li>
         {% unless forloop.last %}
           <p>&bull;</p>
@@ -86,7 +86,7 @@ pagination:
                     <p class="post-meta">
                       {{ read_time }} min read &nbsp; &middot; &nbsp;
                       <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}">
-                        <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
+                        <i class="fa-solid fa-calendar"></i> {{ year }} </a>
                     </p>
                   </div>
                 </div>
@@ -149,13 +149,13 @@ pagination:
       </p>
       <p class="post-tags">
         <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}">
-          <i class="fa-solid fa-calendar fa-sm"></i> {{ year }} </a>
+          <i class="fa-solid fa-calendar"></i> {{ year }} </a>
 
           {% if tags != "" %}
           &nbsp; &middot; &nbsp;
             {% for tag in post.tags %}
             <a href="{{ tag | slugify | prepend: '/blog/tag/' | prepend: site.baseurl}}">
-              <i class="fa-solid fa-hashtag fa-sm"></i> {{ tag }}</a>
+              <i class="fa-solid fa-hashtag"></i> {{ tag }}</a>
               {% unless forloop.last %}
                 &nbsp;
               {% endunless %}
@@ -166,7 +166,7 @@ pagination:
           &nbsp; &middot; &nbsp;
             {% for category in post.categories %}
             <a href="{{ category | slugify | prepend: '/blog/category/' | prepend: site.baseurl}}">
-              <i class="fa-solid fa-tag fa-sm"></i> {{ category }}</a>
+              <i class="fa-solid fa-tag"></i> {{ category }}</a>
               {% unless forloop.last %}
                 &nbsp;
               {% endunless %}

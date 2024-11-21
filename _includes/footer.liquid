@@ -1,5 +1,10 @@
 {% if site.footer_fixed %}
   <footer class="fixed-bottom" role="contentinfo">
+    {% if page.social %}
+      <div class="social">
+        <div class="contact-icons">{% include social.liquid %}</div>
+      </div>
+    {% endif %}
     <div class="container mt-0">
       &copy; Copyright {{ site.time | date: '%Y' }}
       {{ site.first_name }}
@@ -18,7 +23,9 @@
     {% if site.newsletter.enabled %}
       {% include scripts/newsletter.liquid %}
     {% endif %}
-
+    <div class="social">
+      <div class="contact-icons">{% include social.liquid %}</div>
+    </div>
     <div class="container">
       &copy; Copyright {{ site.time | date: '%Y' }}
       {{ site.first_name }}
